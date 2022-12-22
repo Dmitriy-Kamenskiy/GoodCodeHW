@@ -4,7 +4,7 @@ public class Purchase {
     protected String title;
     protected int count;
     protected int size;
-    protected Purchase[] purchases;// = new Purchase[size];
+    protected Purchase[] purchases;
 
     public Purchase(String title, int count) {
         this.title = title;
@@ -17,10 +17,7 @@ public class Purchase {
     }
 
     public void addPurchase(String title, int count) {
-        if (purchases.length == 0){
-            purchases[0] =  new Purchase(title, count);
-        }
-        for (int i = 0; i < purchases.length; i++) {
+                for (int i = 0; i < purchases.length; i++) {
             if (purchases[i] == null) {
                 purchases[i] = new Purchase(title, count);
                 return;
